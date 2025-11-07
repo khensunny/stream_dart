@@ -30,6 +30,7 @@ class StreamClient {
         : iatInSeconds + validityInSeconds;
 
     payload = {
+      'user_id': userId,
       'iat': iatInSeconds,
       'validity_in_seconds': validityInSeconds,
       'exp': expInSeconds,
