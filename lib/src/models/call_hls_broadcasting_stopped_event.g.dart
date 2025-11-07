@@ -1,0 +1,35 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'call_hls_broadcasting_stopped_event.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+CallHLSBroadcastingStoppedEvent _$CallHLSBroadcastingStoppedEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate(
+  'CallHLSBroadcastingStoppedEvent',
+  json,
+  ($checkedConvert) {
+    $checkKeys(json, requiredKeys: const ['call_cid', 'created_at', 'type']);
+    final val = CallHLSBroadcastingStoppedEvent(
+      callCid: $checkedConvert('call_cid', (v) => v as String),
+      createdAt: $checkedConvert('created_at', (v) => v as num),
+      type: $checkedConvert(
+        'type',
+        (v) => v as String? ?? 'call.hls_broadcasting_stopped',
+      ),
+    );
+    return val;
+  },
+  fieldKeyMap: const {'callCid': 'call_cid', 'createdAt': 'created_at'},
+);
+
+Map<String, dynamic> _$CallHLSBroadcastingStoppedEventToJson(
+  CallHLSBroadcastingStoppedEvent instance,
+) => <String, dynamic>{
+  'call_cid': instance.callCid,
+  'created_at': instance.createdAt,
+  'type': instance.type,
+};

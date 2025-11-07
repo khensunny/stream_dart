@@ -1,0 +1,46 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+
+// ignore_for_file: unused_element
+import 'package:json_annotation/json_annotation.dart';
+import 'package:equatable/src/equatable_utils.dart';
+
+part 'active_calls_resolution_stats.g.dart';
+
+@JsonSerializable(
+  checked: true,
+  createToJson: true,
+  disallowUnrecognizedKeys: false,
+  explicitToJson: true,
+)
+class ActiveCallsResolutionStats {
+  /// Returns a new [ActiveCallsResolutionStats] instance.
+  ActiveCallsResolutionStats({required this.p10, required this.p50});
+
+  @JsonKey(name: r'p10', required: true, includeIfNull: false)
+  final double p10;
+
+  @JsonKey(name: r'p50', required: true, includeIfNull: false)
+  final double p50;
+
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        other is ActiveCallsResolutionStats &&
+            runtimeType == other.runtimeType &&
+            equals([p10, p50], [other.p10, other.p50]);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode ^ mapPropsToHashCode([p10, p50]);
+
+  factory ActiveCallsResolutionStats.fromJson(Map<String, dynamic> json) =>
+      _$ActiveCallsResolutionStatsFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ActiveCallsResolutionStatsToJson(this);
+
+  @override
+  String toString() {
+    return toJson().toString();
+  }
+}

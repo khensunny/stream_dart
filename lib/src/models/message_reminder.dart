@@ -1,0 +1,131 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+
+// ignore_for_file: unused_element
+import 'package:stream_dart/src/models/channel.dart';
+import 'package:stream_dart/src/models/user.dart';
+import 'package:stream_dart/src/models/message.dart';
+import 'package:json_annotation/json_annotation.dart';
+import 'package:equatable/src/equatable_utils.dart';
+
+part 'message_reminder.g.dart';
+
+@JsonSerializable(
+  checked: true,
+  createToJson: true,
+  disallowUnrecognizedKeys: false,
+  explicitToJson: true,
+)
+class MessageReminder {
+  /// Returns a new [MessageReminder] instance.
+  MessageReminder({
+    this.channel,
+
+    required this.channelCid,
+
+    required this.createdAt,
+
+    this.message,
+
+    required this.messageId,
+
+    this.remindAt,
+
+    required this.taskId,
+
+    required this.updatedAt,
+
+    this.user,
+
+    required this.userId,
+  });
+
+  @JsonKey(name: r'channel', required: false, includeIfNull: false)
+  final Channel? channel;
+
+  @JsonKey(name: r'channel_cid', required: true, includeIfNull: false)
+  final String channelCid;
+
+  @JsonKey(name: r'created_at', required: true, includeIfNull: false)
+  final num createdAt;
+
+  @JsonKey(name: r'message', required: false, includeIfNull: false)
+  final Message? message;
+
+  @JsonKey(name: r'message_id', required: true, includeIfNull: false)
+  final String messageId;
+
+  @JsonKey(name: r'remind_at', required: false, includeIfNull: false)
+  final num? remindAt;
+
+  @JsonKey(name: r'task_id', required: true, includeIfNull: false)
+  final String taskId;
+
+  @JsonKey(name: r'updated_at', required: true, includeIfNull: false)
+  final num updatedAt;
+
+  @JsonKey(name: r'user', required: false, includeIfNull: false)
+  final User? user;
+
+  @JsonKey(name: r'user_id', required: true, includeIfNull: false)
+  final String userId;
+
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        other is MessageReminder &&
+            runtimeType == other.runtimeType &&
+            equals(
+              [
+                channel,
+                channelCid,
+                createdAt,
+                message,
+                messageId,
+                remindAt,
+                taskId,
+                updatedAt,
+                user,
+                userId,
+              ],
+              [
+                other.channel,
+                other.channelCid,
+                other.createdAt,
+                other.message,
+                other.messageId,
+                other.remindAt,
+                other.taskId,
+                other.updatedAt,
+                other.user,
+                other.userId,
+              ],
+            );
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      mapPropsToHashCode([
+        channel,
+        channelCid,
+        createdAt,
+        message,
+        messageId,
+        remindAt,
+        taskId,
+        updatedAt,
+        user,
+        userId,
+      ]);
+
+  factory MessageReminder.fromJson(Map<String, dynamic> json) =>
+      _$MessageReminderFromJson(json);
+
+  Map<String, dynamic> toJson() => _$MessageReminderToJson(this);
+
+  @override
+  String toString() {
+    return toJson().toString();
+  }
+}

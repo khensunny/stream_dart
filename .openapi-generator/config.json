@@ -1,0 +1,28 @@
+{
+    "generatorName" : "dart-dio",
+    "inputSpec" : ".openapi-generator/serverside-api.yaml",
+    "outputDir" : ".",
+    "ignoreFileOverride": ".openapi-generator-ignore",
+    "globalProperties": {
+        "modelDocs": false,
+        "apiDocs": false
+    },
+    "additionalProperties" : {
+        "pubName" : "stream_dart",
+        "pubDescription": "Stream SDK for Dart",
+        "pubHomepage": "https://getstream.io/",
+        "equalityCheckMethod": "equatable",
+        "serializationLibrary": "json_serializable",
+        "skipCopyWith": true,
+        "enumUnknownDefaultCase": true
+    },
+    "enablePostProcessFile": true,
+    "removeOperationIdPrefix": true,
+    "modelPackage": "models",
+    "openapiNormalizer" : {
+        "FILTER": "tag:common"
+    },
+    "modelNameMappings": {
+        "Response": "StreamResponse"
+    }
+}

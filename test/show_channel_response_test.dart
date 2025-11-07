@@ -1,0 +1,16 @@
+import 'package:test/test.dart';
+import 'package:stream_dart/stream_dart.dart';
+
+// tests for ShowChannelResponse
+void main() {
+  final ShowChannelResponse? instance = /* ShowChannelResponse(...) */ null;
+  // TODO add properties to the entity
+
+  group(ShowChannelResponse, () {
+    // Duration of the request in milliseconds
+    // String duration
+    test('to test the property `duration`', () async {
+      // TODO
+    });
+  });
+}

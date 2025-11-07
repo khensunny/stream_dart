@@ -1,0 +1,54 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+
+// ignore_for_file: unused_element
+import 'package:stream_dart/src/models/user_request.dart';
+import 'package:json_annotation/json_annotation.dart';
+import 'package:equatable/src/equatable_utils.dart';
+
+part 'unblock_users_request.g.dart';
+
+@JsonSerializable(
+  checked: true,
+  createToJson: true,
+  disallowUnrecognizedKeys: false,
+  explicitToJson: true,
+)
+class UnblockUsersRequest {
+  /// Returns a new [UnblockUsersRequest] instance.
+  UnblockUsersRequest({required this.blockedUserId, this.user, this.userId});
+
+  @JsonKey(name: r'blocked_user_id', required: true, includeIfNull: false)
+  final String blockedUserId;
+
+  @JsonKey(name: r'user', required: false, includeIfNull: false)
+  final UserRequest? user;
+
+  @JsonKey(name: r'user_id', required: false, includeIfNull: false)
+  final String? userId;
+
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        other is UnblockUsersRequest &&
+            runtimeType == other.runtimeType &&
+            equals(
+              [blockedUserId, user, userId],
+              [other.blockedUserId, other.user, other.userId],
+            );
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ mapPropsToHashCode([blockedUserId, user, userId]);
+
+  factory UnblockUsersRequest.fromJson(Map<String, dynamic> json) =>
+      _$UnblockUsersRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UnblockUsersRequestToJson(this);
+
+  @override
+  String toString() {
+    return toJson().toString();
+  }
+}
